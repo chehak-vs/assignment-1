@@ -1,15 +1,15 @@
-import {FlatList, SafeAreaView, View} from 'react-native';
+import {FlatList, View} from 'react-native';
 import React from 'react';
-import list from '../../data/data-two.json';
+
 import TopNav from '../../components/top-nav/TopNav';
 import DActiveCard from '../../components/d-active-card/DActiveCard';
 import {imagePathsDActive} from '../../constants/image-constants';
-import {backRight} from '../../constants/icons-constants';
+import list from '../../services/data-two.json';
 
-export default function DActive() {
+const DActive = () => {
   return (
-    <SafeAreaView>
-      <TopNav title="D-active" imageRight={backRight} />
+    <View>
+      <TopNav title="D-active" />
       <View>
         <FlatList
           data={list}
@@ -23,6 +23,8 @@ export default function DActive() {
           keyExtractor={(item, index) => item.id.toString()}
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
+
+export default DActive;

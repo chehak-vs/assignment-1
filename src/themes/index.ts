@@ -1,1 +1,4 @@
-export * from '../themes'
+export * from './color'
+export * from './typography'
+export * from './spacing'
+export * from './palette'

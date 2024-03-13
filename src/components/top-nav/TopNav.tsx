@@ -1,8 +1,9 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+
 import styles from './TopNav-styles';
 
-export default function TopNav(props: any) {
+const TopNav = (props: any) => {
   return (
     <View style={styles.container}>
       <View style={[styles.containerImage, {marginLeft: 24}]} />
@@ -14,3 +15,5 @@ export default function TopNav(props: any) {
     </View>
   );
 }
+
+export default TopNav;

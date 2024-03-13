@@ -1,13 +1,15 @@
 import {Text, View, FlatList, SafeAreaView, Image} from 'react-native';
 import React, {useState, useEffect} from 'react';
-import list from '../../data/data-one.json';
+
 import TopNav from '../top-nav/TopNav';
 import {formatTimeAgo} from '../../utils/common-utils';
 import {imagePaths} from '../../constants/image-constants';
 import {settings} from '../../constants/icons-constants';
+import list from '../../services/data-one.json';
+
 import styles from './NotificationsCard-styles';
 
-export default function Notifications() {
+const Notifications = () => {
   const [elapsedTime, setElapsedTime] = useState<number>(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -52,4 +54,6 @@ export default function Notifications() {
       </View>
     </SafeAreaView>
   );
-}
+};
+
+export default Notifications;

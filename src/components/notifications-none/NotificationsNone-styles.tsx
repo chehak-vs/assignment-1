@@ -1,44 +1,40 @@
-import { StyleSheet, StyleProp, ViewStyle, TextStyle, ImageStyle  } from "react-native";
-import Colors from "../../themes/color";
+import {StyleSheet, ViewStyle, TextStyle, ImageStyle} from 'react-native';
+import {Spaces, COLORS} from '../../themes';
 
 interface Styles {
-    container: StyleProp<ViewStyle>;
-    card: StyleProp<ViewStyle>;
-    cardImage: StyleProp<ImageStyle>;
-    cardHeading: StyleProp<TextStyle>;
-    cardText: StyleProp<TextStyle>;
-  }
+  container: ViewStyle;
+  card: ViewStyle;
+  cardImage: ImageStyle;
+  cardHeading: TextStyle;
+  cardText: TextStyle;
+}
 
 const styles: Styles = StyleSheet.create({
-    container: {
-        
-    },
-    card: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: 184,
-        marginBottom: 259,
-        marginLeft: 20,
-        marginRight: 20,
-    },
-    cardImage: {
-        height: 154,
-        width: 154,
-    },
-    cardHeading:{
-        fontSize: 24,
-        fontWeight: '700',
-        alignSelf: 'center',
-        color: Colors.NuetralBlack,
-        lineHeight: 32.4
-    },
-    cardText: {
-        fontSize: 16,
-        fontWeight: '500',
-        lineHeight:24,
-        alignSelf: 'center',
-        color: Colors.NuetralBlack,
-    }
-})
+  container: {},
+  card: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: Spaces.space_184,
+    marginBottom: Spaces.space_259,
+    marginLeft: Spaces.space_20,
+    marginRight: Spaces.space_20,
+  },
+  cardImage: {
+    height: Spaces.space_154,
+    width: Spaces.space_154,
+  },
+  cardHeading: {
+    fontSize: Spaces.space_24,
+    alignSelf: 'center',
+    color: COLORS.tundora,
+    lineHeight: Spaces.space_32,
+  },
+  cardText: {
+    fontSize: Spaces.space_16,
+    lineHeight: Spaces.space_24,
+    alignSelf: 'center',
+    color: COLORS.tundora,
+  },
+});
 
 export default styles;

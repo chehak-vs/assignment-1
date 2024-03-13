@@ -1,11 +1,5 @@
-import {
-  StyleSheet,
-  StyleProp,
-  ViewStyle,
-  TextStyle,
-  ImageStyle,
-} from 'react-native';
-import Colors from '../../themes/color';
+import {StyleSheet, ViewStyle, TextStyle, ImageStyle} from 'react-native';
+import { COLORS, Spaces } from '../../themes';
 
 interface Styles {
   listCardContainer: ViewStyle;
@@ -19,35 +13,34 @@ interface Styles {
 
 const styles: Styles = StyleSheet.create({
   listCardContainer: {
-    backgroundColor: Colors.Nuetral100,
+    backgroundColor: COLORS.neutral[100],
   },
 
   listContainer: {
     flexDirection: 'row',
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 17,
+    marginLeft: Spaces.space_20,
+    marginRight: Spaces.space_20,
+    marginTop: Spaces.space_17,
   },
   listImage: {
-    height: 48,
-    width: 48,
+    height: Spaces.space_48,
+    width: Spaces.space_48,
   },
   listText: {
-    marginLeft: 20,
-    marginRight: 8,
-    fontSize: 14,
-    fontWeight: '500',
+    marginLeft: Spaces.space_20,
+    marginRight: Spaces.space_8,
+    fontSize: Spaces.space_14,
   },
   listTimeContainer: {
-    marginLeft: 20,
-    marginRight: 20,
-    paddingLeft: 76,
-    marginBottom: 17,
+    marginLeft: Spaces.space_20,
+    marginRight: Spaces.space_20,
+    paddingLeft: Spaces.space_76,
+    marginBottom: Spaces.space_17,
   },
   listTime: {},
   separator: {
-    height: 1, 
-    backgroundColor: '#E2E8EB', 
+    height: Spaces.space_1, 
+    backgroundColor: COLORS.neutral[100], 
   },
 });
 

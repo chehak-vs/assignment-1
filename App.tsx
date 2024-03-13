@@ -1,16 +1,14 @@
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import Notifications from './src/screens/notifications/Notifications'
-import TopNav from './src/components/top-nav/TopNav'
-import DActive from './src/screens/d-active/DActive'
+import {SafeAreaView} from 'react-native';
+import React from 'react';
 
-export default function App() {
+import DActive from './src/screens/d-active/DActive';
+
+const App = () => {
   return (
     <SafeAreaView>
-      {/* <Notifications /> */}
       <DActive />
     </SafeAreaView>
-  )
-}
+  );
+};
 
-const styles = StyleSheet.create({})
+export default App;

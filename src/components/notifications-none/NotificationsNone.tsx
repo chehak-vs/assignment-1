@@ -1,11 +1,13 @@
 import {Text, View, Image} from 'react-native';
 import React from 'react';
+
 import TopNav from '../top-nav/TopNav';
 import {bell} from '../../constants/image-constants';
 import {settings} from '../../constants/icons-constants';
+
 import styles from './NotificationsNone-styles';
 
-export default function NotificationsNone() {
+const NotificationsNone = () => {
   return (
     <View style={styles.container}>
       <TopNav title="Notifications" imageRight={settings} />
@@ -22,3 +24,5 @@ export default function NotificationsNone() {
     </View>
   );
 }
+
+export default NotificationsNone;
