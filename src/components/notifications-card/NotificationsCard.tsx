@@ -2,15 +2,10 @@ import {Text, View, FlatList, SafeAreaView, Image} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import list from '../../data/data-one.json';
 import TopNav from '../top-nav/TopNav';
-const backButton = require('../../assets/icons/back.png');
-const settings = require('../../assets/icons/icons.png');
+import {formatTimeAgo} from '../../utils/common-utils';
+import {imagePaths} from '../../constants/image-constants';
+import {settings} from '../../constants/icons-constants';
 import styles from './NotificationsCard-styles';
-
-const imagePaths: {[key: string]: string} = {
-  "Reflection": require('../../assets/images/reflection.png'),
-  "Reminder": require('../../assets/images/reminder.png'),
-  'D-active': require('../../assets/images/d-active.png'),
-};
 
 export default function Notifications() {
   const [elapsedTime, setElapsedTime] = useState<number>(0);
@@ -22,33 +17,17 @@ export default function Notifications() {
     return () => clearInterval(interval);
   }, []);
 
-  const formatTimeAgo = (elapsedTime: number) => {
-    if (elapsedTime < 60) {
-      return `${elapsedTime}m ago`;
-    } else {
-      const hours = Math.floor(elapsedTime / 60);
-      return `${hours}h ago`;
-    }
-  };
+  formatTimeAgo(elapsedTime);
 
   return (
     <SafeAreaView>
-      <TopNav
-        title="Notifications"
-        imageLeft={backButton}
-        imageRight={settings}
-      />
+      <TopNav title="Notifications" imageRight={settings} />
       <View>
         <FlatList
           data={list}
           renderItem={({item, index}) => {
             return (
-              <View
-                style={
-                  item.id === 1 || item.id === 2
-                    ? styles.listCardContainer
-                    : null
-                }>
+              <View>
                 <View style={styles.listContainer}>
                   <Image
                     source={imagePaths[item.name]}
