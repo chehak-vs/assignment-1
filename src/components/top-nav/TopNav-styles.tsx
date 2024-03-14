@@ -3,8 +3,8 @@ import {Spaces} from '../../themes';
 
 interface Styles {
   container: ViewStyle;
-  containerImage: ImageStyle;
-  containerText: TextStyle;
+  image: ImageStyle;
+  text: TextStyle;
 }
 
 const styles: Styles = StyleSheet.create({
@@ -12,12 +12,12 @@ const styles: Styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  containerImage: {
+  image: {
     height: Spaces.space_24,
     width: Spaces.space_24,
     marginVertical: Spaces.space_16,
   },
-  containerText: {
+  text: {
     fontSize: Spaces.space_18,
     alignSelf: 'center',
     paddingVertical: Spaces.space_16,

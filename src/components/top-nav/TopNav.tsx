@@ -6,11 +6,11 @@ import styles from './TopNav-styles';
 const TopNav = (props: any) => {
   return (
     <View style={styles.container}>
-      <View style={[styles.containerImage, {marginLeft: 24}]} />
-      <Text style={styles.containerText}>{props.title}</Text>
+      <View style={[styles.image, {marginLeft: 24}]} />
+      <Text style={styles.text}>{props.title}</Text>
       <Image
         source={props.imageRight}
-        style={[styles.containerImage, {marginRight: 34}]}
+        style={[styles.image, {marginRight: 34}]}
       />
     </View>
   );

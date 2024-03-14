@@ -2,9 +2,9 @@ import {StyleSheet, ViewStyle, TextStyle} from 'react-native';
 import {COLORS, Spaces} from '../../themes';
 
 interface Styles {
-  listContainer: ViewStyle;
-  bgImage: ViewStyle;
-  innerContainer: ViewStyle;
+  container: ViewStyle;
+  image: ViewStyle;
+  subContainer: ViewStyle;
   textContainer: ViewStyle;
   text: TextStyle;
   buttonContainer: ViewStyle;
@@ -13,14 +13,14 @@ interface Styles {
 }
 
 const styles: Styles = StyleSheet.create({
-  listContainer: {
+  container: {
     borderRadius: Spaces.space_16,
   },
-  bgImage: {
+  image: {
     height: Spaces.space_148,
     margin: Spaces.space_20,
   },
-  innerContainer: {
+  subContainer: {
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',

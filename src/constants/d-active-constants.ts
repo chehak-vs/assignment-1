@@ -1,1 +1,0 @@
-export const textGradientColor = ['#FFFFFF8F', '#FFFFFF1E', '#FFFFFF00'];

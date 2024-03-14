@@ -45,4 +45,5 @@ export const palette = {
   tundora: '#454545',
   dActiveButtonGradient: ['#FFFFFF00', '#FFFFFFCC'],
   dActiveTextGradient: ['#FFFFFF8F', '#FFFFFF1E', '#FFFFFF00'],
+  textGradientColor: ['#FFFFFF8F', '#FFFFFF1E', '#FFFFFF00'],
 };

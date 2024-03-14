@@ -3,15 +3,15 @@ import {Spaces, COLORS} from '../../themes';
 
 interface Styles {
   container: ViewStyle;
-  card: ViewStyle;
-  cardImage: ImageStyle;
-  cardHeading: TextStyle;
-  cardText: TextStyle;
+  subContainer: ViewStyle;
+  image: ImageStyle;
+  title: TextStyle;
+  text: TextStyle;
 }
 
 const styles: Styles = StyleSheet.create({
   container: {},
-  card: {
+  subContainer: {
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: Spaces.space_184,
@@ -19,17 +19,17 @@ const styles: Styles = StyleSheet.create({
     marginLeft: Spaces.space_20,
     marginRight: Spaces.space_20,
   },
-  cardImage: {
+  image: {
     height: Spaces.space_154,
     width: Spaces.space_154,
   },
-  cardHeading: {
+  title: {
     fontSize: Spaces.space_24,
     alignSelf: 'center',
     color: COLORS.tundora,
     lineHeight: Spaces.space_32,
   },
-  cardText: {
+  text: {
     fontSize: Spaces.space_16,
     lineHeight: Spaces.space_24,
     alignSelf: 'center',

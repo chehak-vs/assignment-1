@@ -11,12 +11,14 @@ import styles from './NotificationsCard-styles';
 
 const Notifications = () => {
   const [elapsedTime, setElapsedTime] = useState<number>(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const interval = () => {
+    setInterval(() => {
       setElapsedTime(prevElapsedTime => prevElapsedTime + 1);
     }, 60000);
-
-    return () => clearInterval(interval);
+  }
+  
+  useEffect(() => {
+    interval()
   }, []);
 
   formatTimeAgo(elapsedTime);
@@ -30,18 +32,17 @@ const Notifications = () => {
           renderItem={({item, index}) => {
             return (
               <View>
-                <View style={styles.listContainer}>
+                <View style={styles.subContainer}>
                   <Image
                     source={imagePaths[item.name]}
-                    style={styles.listImage}
+                    style={styles.image}
                   />
                   <View>
-                    <Text style={styles.listText}>{item.text1}</Text>
-                    <Text style={styles.listText}>{item.text2}</Text>
+                  <Text style={styles.text}>{item.text.replace('Unlocked', 'Unlocked\n')}</Text>
                   </View>
                 </View>
-                <View style={styles.listTimeContainer}>
-                  <Text style={styles.listTime}>
+                <View style={styles.timeContainer}>
+                  <Text>
                     {formatTimeAgo(elapsedTime)}
                   </Text>
                 </View>

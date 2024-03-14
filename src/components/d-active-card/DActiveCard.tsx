@@ -2,44 +2,37 @@ import {View, Text, ImageBackground, Pressable} from 'react-native';
 import {LinearGradient} from 'react-native-linear-gradient';
 import React from 'react';
 
-import { COLORS } from '../../themes';
+import {COLORS} from '../../themes';
 
 import styles from './DActiveCard-styles';
+import ASButton from '../button/ASButton';
 
-const DActiveCard = (props) => {
+const DActiveCard = (props: any) => {
   return (
-    <View style={styles.listContainer}>
+    <View style={styles.container}>
       <ImageBackground source={props.imageURL} style={styles.bgImage}>
-        <View style={styles.textContainer}>
-      <LinearGradient
-          colors={COLORS.dActiveTextGradient}
-          locations={[0, 0.8792, 1]}
-          style={styles.innerContainer}>
-        <View style={styles.innerContainer}>
-          <View style={styles.textContainer}>
-            <Text style={[styles.text, {color: props.color}]}>
-              {props.title}
-            </Text>
-          </View>
+        <View style={styles.subContainer}>
+          <LinearGradient
+            colors={COLORS.dActiveTextGradient}
+            locations={[0, 0.8792, 1]}
+            style={styles.innerContainer}>
+            <View style={styles.innerContainer}>
+              <View style={styles.subContainer}>
+                <Text style={[styles.text, {color: props.color}]}>
+                  {props.title}
+                </Text>
+              </View>
+            </View>
+          </LinearGradient>
         </View>
-        </LinearGradient>
+        <View style={styles.buttonContainer}>
+          <ASButton text="2 min" />
+          <ASButton text="4 min" />
+          <ASButton text="8 min" />
         </View>
-          <View style={styles.buttonContainer}>
-            <Pressable style={styles.button}>
-              <Text style={styles.buttonText}>2 min</Text>
-            </Pressable>
-            <Pressable style={styles.button}>
-              <Text style={styles.buttonText}>4 min</Text>
-            </Pressable>
-            <Pressable style={styles.button}>
-              <Text style={styles.buttonText}>8 min</Text>
-            </Pressable>
-          </View>
-        
-        
       </ImageBackground>
     </View>
   );
-}
+};
 
-export default DActiveCard; 
+export default DActiveCard;

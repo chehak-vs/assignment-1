@@ -2,10 +2,10 @@ import {StyleSheet, ViewStyle, TextStyle} from 'react-native';
 import {Spaces, COLORS, Typography} from '../../themes';
 
 interface Styles {
-  listContainer: ViewStyle;
+  container: ViewStyle;
   bgImage: ViewStyle;
   innerContainer: ViewStyle;
-  textContainer: ViewStyle;
+  subContainer: ViewStyle;
   text: TextStyle;
   buttonContainer: ViewStyle;
   button: ViewStyle;
@@ -14,7 +14,7 @@ interface Styles {
 }
 
 const styles: Styles = StyleSheet.create({
-  listContainer: {
+  container: {
     borderRadius: Spaces.space_20,
   },
   bgImage: {
@@ -27,7 +27,7 @@ const styles: Styles = StyleSheet.create({
     alignItems: 'center',
     flex: Spaces.space_1,
   },
-  textContainer: {
+  subContainer: {
     height: Spaces.space_81,
   },
   text: {
